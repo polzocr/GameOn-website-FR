@@ -45,7 +45,7 @@ const checkbox1 = document.getElementById('checkbox1');
 //regex
 const regexNames =  /^[a-zA-Z]{2,}$/;
 const regexEmail = /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-const regexQuantity = /^\d{1,2}$/;
+const regexQuantity = /^\d+$/;
 
 
 //le champ n'est pas vide
@@ -91,12 +91,11 @@ function checkbox(){
 
 //on test toutes nos fonctions quand on submit le formulaire
 function validate(){
-  // if(notEmpty(firstName) && notEmpty(lastName) && notEmpty(email) && notEmpty(birthdate)){
-  //   console.log(true);
-  // } else {
-  //   console.log(false);
-  // }
-  return false;
+  if(notEmpty(firstName) && notEmpty(lastName) && notEmpty(email) && notEmpty(birthdate) && test(regexEmail, email) && test(regexNames, lastName) && test(regexNames, firstName) && test(regexQuantity, quantity) && checkbox() && tournamentChecked()){
+    return true
+  } else {
+    return false
+  }
 }
 
 
