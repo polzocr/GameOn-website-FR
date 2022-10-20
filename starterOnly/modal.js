@@ -214,8 +214,13 @@ function validate(){
   if(!checkboxValidation()){
     validation = false
   }
-  
-  return validation //si et seulement si toutes les validation sont correctes, on return true
+  if(validation == true){
+    alert('Merci ! Votre réservation a été reçue.')
+    return true
+  } else {
+    return false
+  }
+   //si et seulement si toutes les validation sont correctes, on return true
 
 }
 
