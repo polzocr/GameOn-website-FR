@@ -86,6 +86,7 @@ function createError(index, error){
   const p = document.createElement("p");
   document.getElementsByClassName('formData')[index].appendChild(p);
   p.textContent = error;
+  p.style.color = '#FF4E60';
   p.style.fontSize = "13px";
   p.style.fontWeight = "500";
   p.style.fontFamily = 'sans-serif'; 
