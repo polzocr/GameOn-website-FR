@@ -15,8 +15,10 @@ const formData = document.querySelectorAll(".formData");
 const closeBtn = document.querySelector('.close');
 //formulaire 
 const formu = document.querySelector('form');
-const confirmBtn = document.querySelector('.fermer');
+// modale de confirmation
 const confirmModal = document.querySelector('.confirmation')
+//btn fermer
+const confirmBtn = document.querySelector('.fermer');
 
 
 // launch modal event
@@ -27,7 +29,7 @@ closeBtn.addEventListener('click', () => {
   modalbg.style.display = 'none';
 })
 
-//on ferme le message de confirmation
+//on ferme la modale de confirmation
 
 confirmBtn.addEventListener('click', () => {
   modalbg.style.display = 'none'
@@ -225,13 +227,13 @@ function validate(){
     validation = false
   }
   if(validation == true){
-    formu.style.display = 'none';
-    confirmModal.style.display = 'flex';
+    formu.style.display = 'none';   //si form valide, on le cache
+    confirmModal.style.display = 'flex'; //et on affiche le message
     return false
   } else {
     return false
   }
-   //si et seulement si toutes les validation sont correctes, on return true
+   
 
 }
 
