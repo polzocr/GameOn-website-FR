@@ -15,6 +15,7 @@ const formData = document.querySelectorAll(".formData");
 const closeBtn = document.querySelector('.close');
 //formulaire 
 const formu = document.querySelector('form');
+const modalBody = document.querySelector('.modal-body')
 
 
 
@@ -224,6 +225,11 @@ function validate(){
    //si et seulement si toutes les validation sont correctes, on return true
 
 }
+
+
+formu.style.display = 'none';
+// modalBody.innerHTML += `<h2>Merci pour votre inscription</h2>`
+
 
 
 

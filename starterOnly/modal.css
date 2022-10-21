@@ -158,7 +158,7 @@ main {
 }
 
 .bground {
-  display: none;
+  /* display: none; */
   position: fixed;
   z-index: 1;
   left: 0;
@@ -527,3 +527,35 @@ footer {
   }
 }
 
+/* Ajout du css pour le message de remerciement/confirmation d'inscription */
+.modal-body{
+  text-align: center;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body h2{
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.modal-body button{
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+  background-color: #FE142F;
+  border-radius: 8px;
+  border: none;
+  width: 182px;
+  height: 40px;
+  position: absolute;
+  bottom: 20px;
+}
+
+.modal-body button:hover{
+  cursor: pointer;
+  background: #3876ac
+}
