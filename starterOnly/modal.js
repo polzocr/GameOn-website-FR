@@ -15,8 +15,8 @@ const formData = document.querySelectorAll(".formData");
 const closeBtn = document.querySelector('.close');
 //formulaire 
 const formu = document.querySelector('form');
-const modalBody = document.querySelector('.modal-body')
-
+const modalBody = document.querySelector('.modal-body');
+const confirmBtn = document.querySelector('.fermer');
 
 
 // launch modal event
@@ -25,6 +25,11 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 //close modal event
 closeBtn.addEventListener('click', () => {
   modalbg.style.display = 'none';
+})
+
+//on ferme le message de confirmation
+confirmBtn.addEventListener('click', () => {
+  modalbg.style.display = 'none'
 })
 
 // launch modal form
