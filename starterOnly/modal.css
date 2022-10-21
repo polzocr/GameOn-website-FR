@@ -528,21 +528,23 @@ footer {
 }
 
 /* Ajout du css pour le message de remerciement/confirmation d'inscription */
-.modal-body{
+.confirmation{
   text-align: center;
   height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  display: none;
+
 }
 
-.modal-body h2{
+.confirmation h2{
   font-size: 36px;
   font-weight: 400;
 }
 
-.modal-body button{
+.confirmation button{
   font-size: 14px;
   color: white;
   font-weight: 500;

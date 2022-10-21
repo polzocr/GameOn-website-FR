@@ -15,8 +15,8 @@ const formData = document.querySelectorAll(".formData");
 const closeBtn = document.querySelector('.close');
 //formulaire 
 const formu = document.querySelector('form');
-const modalBody = document.querySelector('.modal-body');
 const confirmBtn = document.querySelector('.fermer');
+const confirmModal = document.querySelector('.confirmation')
 
 
 // launch modal event
@@ -28,9 +28,12 @@ closeBtn.addEventListener('click', () => {
 })
 
 //on ferme le message de confirmation
+
 confirmBtn.addEventListener('click', () => {
   modalbg.style.display = 'none'
 })
+
+
 
 // launch modal form
 function launchModal() {
@@ -222,8 +225,9 @@ function validate(){
     validation = false
   }
   if(validation == true){
-    alert('Merci ! Votre réservation a été reçue.')
-    return true
+    formu.style.display = 'none';
+    confirmModal.style.display = 'flex';
+    return false
   } else {
     return false
   }
@@ -232,8 +236,7 @@ function validate(){
 }
 
 
-formu.style.display = 'none';
-// modalBody.innerHTML += `<h2>Merci pour votre inscription</h2>`
+
 
 
 
