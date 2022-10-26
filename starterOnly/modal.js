@@ -63,7 +63,7 @@ const radiosError = "Vous devez choisir une option.";
 const checkbox1Error = "Vous devez vérifier que vous acceptez les termes et conditions.";
 
 //regex
-const regexNames =  /^[a-zA-Z]{2,}$/;
+const regexNames =  /^[a-zA-Zàáâäãåąčćęèéêëėįìíîïłńòóôöõùúûüųūÿýżźñç,.'-]+$/u;
 const regexEmail = /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const regexQuantity = /^\d+$/;
 
@@ -84,7 +84,7 @@ function test(regex, value){
 
 //le champ n'est pas vide
 function notEmpty(value){
-  if (value.value !== ''){
+  if (value.value.trim() !== ''){
     return true;
   } else{
     return false;
